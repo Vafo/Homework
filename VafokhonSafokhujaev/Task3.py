@@ -30,7 +30,7 @@ def mysplit(source, separators = None, maxsplit = None):
 
     return result
 
-test_str = "abobaaa abob suka"
+test_str = "abobaaa abob "
 
 print(mysplit(test_str, "a"))
 print(test_str.split("a"))
