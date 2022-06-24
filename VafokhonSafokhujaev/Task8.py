@@ -1,4 +1,4 @@
-def get_pairs(lst: list) -> list[tuple]:
+def get_pairs_zip(lst: list) -> list[tuple]:
     if len(lst) < 2:
         return None
 
@@ -7,6 +7,20 @@ def get_pairs(lst: list) -> list[tuple]:
 
     return [ el for el in zip(first, second)]
 
-tmp = get_pairs(['need', 'to', 'sleep', 'more'])
+def get_pairs_while(lst: list) -> list[tuple]:
+    if len(lst) < 2:
+        return None
 
-print(tmp)
+    length = len(lst) - 1
+    res = []
+
+    for i in range(length):
+        res.append( (lst[i], lst[i+1]) )
+
+    return res
+
+tmp_zip = get_pairs_zip(['need', 'to', 'sleep', 'more'])
+tmp_while = get_pairs_while(['need', 'to', 'sleep', 'more'])
+
+print(tmp_zip)
+print(tmp_while)
