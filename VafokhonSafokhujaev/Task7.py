@@ -28,7 +28,7 @@ class Money:
         orig_rate = self.exchange_rate[self.currency]
         a = self.value * orig_rate
 
-        if type(other) is int:
+        if isinstance(other, int):
             b = other
         else:
             b = other.value * other.exchange_rate[other.currency]
